@@ -2,18 +2,23 @@
 
 public class Defender : MonoBehaviour
 {
-    bool currenlyRunning = true;
-    float currentSpeed = 1f;
+    float currentSpeed = 1.5f;
+    bool moveCharacter = true;
 
-    public void RunningState(bool isRunning)
+    public void StopRunning()
     {
-        currenlyRunning = isRunning;
+        moveCharacter = false;
+    }
+
+    public void FireProjectile()
+    {
+        Debug.Log("Fire Projectile");
     }
 
     // Update is called once per frame
     void Update()
     {
-        while (currenlyRunning)
+        if (moveCharacter && gameObject.tag.Contains("Human"))
         {
             transform.Translate(Vector2.right * currentSpeed * Time.deltaTime);
         }

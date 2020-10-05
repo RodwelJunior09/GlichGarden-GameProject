@@ -3,15 +3,29 @@
 public class Attacker : MonoBehaviour
 {
     float currentSpeed = 1f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
+    [SerializeField] int healthScore = 100;
 
     public void SetMovementSpeed(float speed)
     {
         currentSpeed = speed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var projectileComponent = collision.GetComponent<FireProjectile>();
+        if (!projectileComponent) return;
+        HitProcess(projectileComponent);
+    }
+
+    private void HitProcess(FireProjectile projectile)
+    {
+        healthScore -= projectile.GetDamage();
+        projectile.Hit();
+        if (healthScore <= 0)
+        {
+            return;
+        }
     }
 
     // Update is called once per frame
