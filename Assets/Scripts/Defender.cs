@@ -10,11 +10,6 @@ public class Defender : MonoBehaviour
         moveCharacter = false;
     }
 
-    public void FireProjectile()
-    {
-        Debug.Log("Fire Projectile");
-    }
-
     // Update is called once per frame
     void Update()
     {

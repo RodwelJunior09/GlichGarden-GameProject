@@ -103,7 +103,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -3494450213032369641, guid: f16d64fc1c2359844bee2b00ea6fd9fb,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -130,3 +130,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectile: {fileID: 7655699595797470411, guid: bfb9543415833314d9832acdc7ea3036,
     type: 3}
+  minSpawnDelay: 0
+  maxSpawnDelay: 5

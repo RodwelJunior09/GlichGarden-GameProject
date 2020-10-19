@@ -3,8 +3,6 @@
 public class Attacker : MonoBehaviour
 {
     float currentSpeed = 1f;
-    
-    [SerializeField] int healthScore = 100;
 
     public void SetMovementSpeed(float speed)
     {
@@ -20,12 +18,8 @@ public class Attacker : MonoBehaviour
 
     private void HitProcess(FireProjectile projectile)
     {
-        healthScore -= projectile.GetDamage();
         projectile.Hit();
-        if (healthScore <= 0)
-        {
-            return;
-        }
+        FindObjectOfType<Health>().DealDamage(projectile.GetDamage());
     }
 
     // Update is called once per frame
