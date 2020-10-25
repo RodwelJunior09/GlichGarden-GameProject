@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3619176405135127890}
   - component: {fileID: 6097733489766840582}
   - component: {fileID: 1357471237}
+  - component: {fileID: -6474937703623607808}
   m_Layer: 0
   m_Name: NinjaDefender
   m_TagString: Human
@@ -131,3 +132,16 @@ MonoBehaviour:
     type: 3}
   minSpawnDelay: 2
   maxSpawnDelay: 5
+--- !u!114 &-6474937703623607808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3619176405135127895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41982f464113ed54b842802380523141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starCost: 100
