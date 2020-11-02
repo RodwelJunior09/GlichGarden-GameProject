@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class DisplayPoints : MonoBehaviour
 {
@@ -24,6 +25,11 @@ public class DisplayPoints : MonoBehaviour
     {
         points += amount;
         UpdateDisplay();
+    }
+
+    public bool HasEnoughPoints(int amount)
+    {
+        return points >= amount;
     }
 
     public void RemovePoints(int amount)

@@ -2,5 +2,15 @@
 
 public class Defenders : MonoBehaviour
 {
-    [SerializeField] int starCost = 100;
+    [SerializeField] int pointsCost = 100;
+
+    public void AddPoints(int amount)
+    {
+        FindObjectOfType<DisplayPoints>().AddPoints(amount);
+    }
+
+    public int GetPointsCost()
+    {
+        return pointsCost;
+    }
 }

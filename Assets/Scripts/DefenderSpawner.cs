@@ -6,7 +6,7 @@ public class DefenderSpawner : MonoBehaviour
 
     private void OnMouseDown()
     {
-        SpawnDefender(GetClickPosition());
+        DefenderPlacingValidation(GetClickPosition());
     }
 
     public void SetSelectedDefender(Defenders defenderSelected)
@@ -21,6 +21,17 @@ public class DefenderSpawner : MonoBehaviour
         return SnapToGrid(wordPos);
     }
 
+    private void DefenderPlacingValidation(Vector2 vectorGrid)
+    {
+        var pointsDisplay = FindObjectOfType<DisplayPoints>();
+        int defenderCost = _defender.GetPointsCost();
+        if (pointsDisplay.HasEnoughPoints(defenderCost))
+        {
+            SpawnDefender(vectorGrid);
+            pointsDisplay.RemovePoints(defenderCost);
+        }
+    }
+
     private Vector2 SnapToGrid(Vector2 rawWorldPos)
     {
         float newX = Mathf.RoundToInt(rawWorldPos.x);
@@ -30,7 +41,6 @@ public class DefenderSpawner : MonoBehaviour
 
     private void SpawnDefender(Vector2 coordenates)
     {
-        Debug.Log(coordenates);
         Defenders newDefender = Instantiate(_defender, coordenates, Quaternion.identity) as Defenders;
     }
 }
