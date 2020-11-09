@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ZombieGirl Walk
+  m_Name: ZombieBoy - Attack
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,28 +20,26 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: d759a7ad854d04ee1aae673f4da5ea88, type: 3}
-    - time: 0.041666668
-      value: {fileID: 21300000, guid: aa5972c2fb4ea44cc908fd056eb7cbc2, type: 3}
+      value: {fileID: 21300000, guid: c28ffd2270777467e8312d833bc37f50, type: 3}
     - time: 0.083333336
-      value: {fileID: 21300000, guid: fa19b24ddbd364507b26ab745f502980, type: 3}
-    - time: 0.125
-      value: {fileID: 21300000, guid: f9d9123c31da44b93bf82ae4d64d9e57, type: 3}
+      value: {fileID: 21300000, guid: ab004a3acc3eb4a9db5de47e93299baa, type: 3}
     - time: 0.16666667
-      value: {fileID: 21300000, guid: 7be0f25d73965424f966d146eb4f420d, type: 3}
-    - time: 0.20833333
-      value: {fileID: 21300000, guid: d6aabf1d159474044b7dc27004c2a690, type: 3}
+      value: {fileID: 21300000, guid: b44903c405777450789a6c332a48c1bf, type: 3}
     - time: 0.25
-      value: {fileID: 21300000, guid: 4c0138f6184d54527a6b10b9051534eb, type: 3}
-    - time: 0.29166666
-      value: {fileID: 21300000, guid: 61ab5db59fc44488d94b3403bbbfb973, type: 3}
+      value: {fileID: 21300000, guid: c727140d0b4ec42c98d2d8db69d427c2, type: 3}
     - time: 0.33333334
-      value: {fileID: 21300000, guid: e668c55d156f54acf9324e8549d3a67e, type: 3}
+      value: {fileID: 21300000, guid: 6b974f15dba49471eaba62ad5e71d8b4, type: 3}
+    - time: 0.41666666
+      value: {fileID: 21300000, guid: d869c0804a8054ed1b9f7dbaa8a09e7f, type: 3}
+    - time: 0.5
+      value: {fileID: 21300000, guid: 5ccf49731ebf54485971f84a06ad1111, type: 3}
+    - time: 0.5833333
+      value: {fileID: 21300000, guid: 6aeac0af58c7f4a81a988ad313be3178, type: 3}
     attribute: m_Sprite
     path: Body
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 24
+  m_SampleRate: 12
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -56,21 +54,20 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: d759a7ad854d04ee1aae673f4da5ea88, type: 3}
-    - {fileID: 21300000, guid: aa5972c2fb4ea44cc908fd056eb7cbc2, type: 3}
-    - {fileID: 21300000, guid: fa19b24ddbd364507b26ab745f502980, type: 3}
-    - {fileID: 21300000, guid: f9d9123c31da44b93bf82ae4d64d9e57, type: 3}
-    - {fileID: 21300000, guid: 7be0f25d73965424f966d146eb4f420d, type: 3}
-    - {fileID: 21300000, guid: d6aabf1d159474044b7dc27004c2a690, type: 3}
-    - {fileID: 21300000, guid: 4c0138f6184d54527a6b10b9051534eb, type: 3}
-    - {fileID: 21300000, guid: 61ab5db59fc44488d94b3403bbbfb973, type: 3}
-    - {fileID: 21300000, guid: e668c55d156f54acf9324e8549d3a67e, type: 3}
+    - {fileID: 21300000, guid: c28ffd2270777467e8312d833bc37f50, type: 3}
+    - {fileID: 21300000, guid: ab004a3acc3eb4a9db5de47e93299baa, type: 3}
+    - {fileID: 21300000, guid: b44903c405777450789a6c332a48c1bf, type: 3}
+    - {fileID: 21300000, guid: c727140d0b4ec42c98d2d8db69d427c2, type: 3}
+    - {fileID: 21300000, guid: 6b974f15dba49471eaba62ad5e71d8b4, type: 3}
+    - {fileID: 21300000, guid: d869c0804a8054ed1b9f7dbaa8a09e7f, type: 3}
+    - {fileID: 21300000, guid: 5ccf49731ebf54485971f84a06ad1111, type: 3}
+    - {fileID: 21300000, guid: 6aeac0af58c7f4a81a988ad313be3178, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.375
+    m_StopTime: 0.6666666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -94,6 +91,13 @@ AnimationClip:
     functionName: SetMovementSpeed
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 0.5
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.25
+    functionName: StrikeCurrentTarget
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 20
     intParameter: 0
     messageOptions: 0

@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 6097733489766840582}
   - component: {fileID: 1357471237}
   - component: {fileID: -6474937703623607808}
+  - component: {fileID: -5346333808818550293}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Human
@@ -175,4 +176,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41982f464113ed54b842802380523141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starCost: 100
+  pointsCost: 100
+--- !u!114 &-5346333808818550293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3619176405135127895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53aae971114301743b487c06e0249a20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 125
+  deathVFX: {fileID: 1906222994913036, guid: 740c2b3187d56c341b8cb78e8aa925c5, type: 3}

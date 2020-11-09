@@ -11,16 +11,24 @@ public class SceneLoader : MonoBehaviour
     void Start()
     {
         var sceneIndex = SceneManager.GetActiveScene().buildIndex;
-        if (sceneIndex == 0)
-        {
-            StartCoroutine(LoadStartMenu());
-        }
+        if (sceneIndex == 0) StartCoroutine(LoadStartMenu());
     }
 
     public IEnumerator LoadStartMenu()
     {
         yield return new WaitForSeconds(5);
         SceneManager.LoadScene("StartScreen");
+    }
+
+    public void LoadGameOver()
+    {
+        StartCoroutine(LoadGameOverScreen());
+    }
+
+    private IEnumerator LoadGameOverScreen()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("GameOver");
     }
 
     public void LoadNextScene()

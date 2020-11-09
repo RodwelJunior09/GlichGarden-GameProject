@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700857945}
   m_LocalRotation: {x: -0, y: 0.9998877, z: -0, w: -0.014992148}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.173, z: 0}
   m_LocalScale: {x: 0.23716, y: 0.24000001, z: 1}
   m_Children: []
   m_Father: {fileID: 8557641634702766201}
@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 432627700}
   - component: {fileID: 3936563402716835955}
   - component: {fileID: 1907620082}
+  - component: {fileID: 6788671480395037189}
   m_Layer: 0
   m_Name: ZombieGirl
   m_TagString: Untagged
@@ -111,7 +112,7 @@ Transform:
   m_GameObject: {fileID: 8557641634702766200}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.93, y: 4.49, z: -0.014693369}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8625, y: 0.8375, z: 1}
   m_Children:
   - {fileID: 700857946}
   m_Father: {fileID: 0}
@@ -161,7 +162,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06503105, y: -0.07727623}
+  m_Offset: {x: -0.07802987, y: -0.036444664}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -172,7 +173,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0485849, y: 1.3335781}
+  m_Size: {x: 0.67328215, y: 0.8951912}
   m_EdgeRadius: 0
 --- !u!50 &3936563402716835955
 Rigidbody2D:
@@ -209,3 +210,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   deathVFX: {fileID: 1906222994913036, guid: 740c2b3187d56c341b8cb78e8aa925c5, type: 3}
+--- !u!114 &6788671480395037189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8557641634702766200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 234c1affe98f24746b95c6cff2fe8df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
