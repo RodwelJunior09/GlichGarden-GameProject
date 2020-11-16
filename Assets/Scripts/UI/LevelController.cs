@@ -23,7 +23,7 @@ public class LevelController : MonoBehaviour
         amountAttacker--;
         if (levelFinished && amountAttacker <= 0)
         {
-            HandleWinCondition();
+            StartCoroutine(HandleWinCondition());
         }
     }
 

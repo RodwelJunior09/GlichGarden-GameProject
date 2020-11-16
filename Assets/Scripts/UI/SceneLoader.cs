@@ -20,21 +20,31 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("StartScreen");
     }
 
+    public void StartScreen()
+    {
+        StartCoroutine(LoadStartMenu());
+    }
+
+    public void LoadOptionsScene()
+    {
+        SceneManager.LoadScene("OptionsScreen");
+    }
+
     public void LoadGameOver()
     {
         StartCoroutine(LoadGameOverScreen());
-    }
-
-    private IEnumerator LoadGameOverScreen()
-    {
-        yield return new WaitForSeconds(5);
-        SceneManager.LoadScene("GameOver");
     }
 
     public void LoadNextScene()
     {
         int currentIndexScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentIndexScene + 1);
+    }
+
+    private IEnumerator LoadGameOverScreen()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("GameOver");
     }
 
     public void QuitGame()
