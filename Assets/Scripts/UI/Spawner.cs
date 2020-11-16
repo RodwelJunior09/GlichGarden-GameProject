@@ -19,6 +19,8 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    public void StopSpawn() => keepSpawning = false;
+
     public IEnumerator SetEnemies()
     {
         var randomNumber = Random.Range(minSpawnDelay, maxSpawnDelay);
@@ -36,11 +38,5 @@ public class Spawner : MonoBehaviour
     {
         Attacker attacker = Instantiate(_enemiesPrefabs[index], transform.position, transform.rotation) as Attacker;
         attacker.transform.parent = transform;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
