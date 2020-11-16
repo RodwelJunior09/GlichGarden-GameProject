@@ -1,24 +1,52 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
-    public int GetNumberAttackersOnScreen()
+    int amountAttacker = 0;
+    bool levelFinished = false;
+
+    [SerializeField] GameObject winLabel;
+
+    private void Start()
     {
-        return FindObjectsOfType<Attacker>().Length;
+        winLabel.SetActive(false);
     }
 
-    public bool TimerFinished()
+    public void AttackerSpawn()
     {
-        return FindObjectOfType<GameTimer>().TimerFinished();
+        amountAttacker++;
     }
 
-    public void StopSpawning()
+    public void AttackerKilled()
     {
-        FindObjectOfType<Spawner>().StopSpawn();
+        amountAttacker--;
+        if (levelFinished && amountAttacker <= 0)
+        {
+            HandleWinCondition();
+        }
     }
 
-    public void PlayerWin()
+    private void StopSpawners()
     {
+        Spawner[] spawners = FindObjectsOfType<Spawner>();
+        for (int i = 0; i < spawners.Length; i++)
+        {
+            spawners[i].StopSpawn();
+        }
+    }
+
+    public void FinishLevel()
+    {
+        levelFinished = true;
+        StopSpawners();
+    }
+
+    private IEnumerator HandleWinCondition()
+    {
+        winLabel.SetActive(true);
+        FindObjectOfType<AudioSource>().Play();
+        yield return new WaitForSeconds(5);
         FindObjectOfType<SceneLoader>().LoadNextScene();
     }
 }
